@@ -16,6 +16,23 @@ services:
     networks:
       - builder_network
 
+  dev:
+    image: castafiore:dev
+    build:
+      context: .
+      dockerfile: Dockerfile.webapp
+      target: dev
+    ports:
+      - 8081:8081
+  
+  web:
+    image: castafiore:web
+    build:
+      context: .
+      dockerfile: Dockerfile.webapp
+    ports:
+      - 8081:80
+
 networks:
   builder_network:
     driver: bridge

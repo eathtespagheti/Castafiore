@@ -1,4 +1,10 @@
 **/node_modules
 .expo
-.github
+.git*
+dist
 web-build
+Dockerfile
+Dockerfile.webapp
+docker-compose.yml
+README.md
+LICENSE
